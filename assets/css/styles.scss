@@ -1,7 +1,56 @@
+@import 'globals/colors';
+
+body {
+	font-family: Roboto;
+}
+
 #container {
 	width: 360px;
-	margin: 0 auto;
-	border: 2px solid gray;
+	margin: 100px auto;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	background: $container-background;
+
+	h1 {
+		background: $highlight;
+		color: white;
+		margin: 0;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: normal;
+	}
+
+	input {
+		font-size: 18px;
+		color: $highlight;
+		background: $container-background;
+		width: 100%;
+		padding: 13px 13px 13px 20px;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+			border: 3px solid $highlight;
+			outline: none;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			background: #fff;
+			height: 40px;
+			line-height: 40px;
+			color: #666;
+
+			&:nth-child(2n) {
+				background: $container-background;
+			}
+		}
+	}
 }
 
 .completed {
