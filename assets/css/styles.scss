@@ -22,8 +22,28 @@ body {
 		font-size: 24px;
 		font-weight: normal;
 
-		.fa-pencil {
+		.fa-minus {
 			float: right;
+			transition: 0.3s linear;
+			display: block;
+		}
+
+		.fa-plus {
+			float: right;
+			transition: 0.3s linear;
+			display: block;
+		}
+
+		.fa-rotate {
+			-webkit-transform: rotate(90deg);
+		  -moz-transform: rotate(90deg);
+		  -ms-transform: rotate(90deg);
+		  -o-transform: rotate(90deg);
+		  transform: rotate(90deg);
+		}
+
+		.hide {
+			display: none;
 		}
 	}
 
@@ -82,4 +102,3 @@ body {
 	color: gray;
 	text-decoration: line-through;
 }
-

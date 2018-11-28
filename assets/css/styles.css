@@ -21,8 +21,21 @@ body {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: normal; }
-    #container h1 .fa-pencil {
-      float: right; }
+    #container h1 .fa-minus {
+      float: right;
+      -webkit-transition: 0.3s linear;
+      transition: 0.3s linear;
+      display: block; }
+    #container h1 .fa-plus {
+      float: right;
+      -webkit-transition: 0.3s linear;
+      transition: 0.3s linear;
+      display: block; }
+    #container h1 .fa-rotate {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    #container h1 .hide {
+      display: none; }
   #container input {
     font-size: 18px;
     color: #2980b9;
