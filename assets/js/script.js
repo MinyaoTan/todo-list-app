@@ -11,6 +11,7 @@ $("ul").on("click", "span", function(event) {
 	});
 });
 
+// Push enter on keyboard to add new item
 $("input[type='text']").keypress(function(event) {
 	let todoText = $(this).val();
 
@@ -20,6 +21,7 @@ $("input[type='text']").keypress(function(event) {
 	}
 });
 
+// Click ADD to add new item
 $(".add").click(function() {
 	let todoText = $("input[type='text']").val();
 
@@ -29,6 +31,7 @@ $(".add").click(function() {
 	}
 })
 
+// Click minus to hide input box
 $(".fa-minus").click(function() {
 	$("input[type='text']").slideToggle(300);
 	$(this).toggleClass("hide");
@@ -39,6 +42,7 @@ $(".fa-minus").click(function() {
 	});
 });
 
+// Click plus to show input box
 $(".fa-plus").click(function() {
 	$("input[type='text']").slideToggle(300);
 	$(this).toggleClass("fa-rotate");
@@ -50,6 +54,21 @@ $(".fa-plus").click(function() {
 	});
 });
 
+// Always remove fa-rotate class after minus/plus is clicked
 if ($(".fa-plus").hasClass("fa-rotate")) {
 	$(".fa-plus").toggleClass("fa-rotate");
 }
+
+// Show delete icon when swiping right
+$("li").on("swiperight", function() {
+	$(this).find("span").css("width", "40px");
+	$(this).find("span").css("opacity", "1");
+})
+
+// Hide delete icon when swiping left and when icon is showing
+$("li").on("swipeleft", function() {
+	if ($(this).find("span").css("opacity") == "1") {
+		$(this).find("span").css("width", "0");
+		$(this).find("span").css("opacity", "0");
+	}
+})
