@@ -61,8 +61,8 @@ if ($(".fa-plus").hasClass("fa-rotate")) {
 
 // Show delete icon when swiping right
 $("li").on("swiperight", function() {
-	$(this).find("span").css("width", "40px");
-	$(this).find("span").css("opacity", "1");
+	$("span").css("width", "40px");
+	$("span").css("opacity", "1");
 })
 
 // Hide delete icon when swiping left and when icon is showing
