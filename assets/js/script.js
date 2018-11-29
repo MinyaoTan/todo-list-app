@@ -12,12 +12,22 @@ $("ul").on("click", "span", function(event) {
 });
 
 $("input[type='text']").keypress(function(event) {
-	if (event.which === 13) {
-		var todoText = $(this).val();
+	let todoText = $(this).val();
+
+	if (event.which === 13 && todoText !== "") {
 		$(this).val("");
 		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
 	}
 });
+
+$(".add").click(function() {
+	let todoText = $("input[type='text']").val();
+
+	if (todoText !== "") {
+		$("input[type='text']").val("");
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
+	}
+})
 
 $(".fa-minus").click(function() {
 	$("input[type='text']").slideToggle(300);

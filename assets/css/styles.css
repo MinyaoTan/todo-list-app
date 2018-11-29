@@ -36,11 +36,17 @@ body {
       transform: rotate(90deg); }
     #container h1 .hide {
       display: none; }
+  #container .add {
+    display: inline;
+    font-size: 18px;
+    color: #2980b9;
+    background: lightblue;
+    padding: 18px 11px 18px 11px; }
   #container input {
     font-size: 18px;
     color: #2980b9;
     background: #f7f7f7;
-    width: 100%;
+    width: 300px;
     padding: 13px 13px 13px 20px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
